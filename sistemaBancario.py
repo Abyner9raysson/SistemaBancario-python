@@ -31,19 +31,19 @@ while True:
     elif opcao == "2":
         valor_saq = float(input("valor do saque: "))
 
-        execedeu_saldo = valor_saq > saldo
+        passouValorSaldo = valor_saq > saldo
 
-        execedeu_limite = valor_saq > limite
+        passouValorLimite = valor_saq > limite
 
-        execedeu_saq = saques_feito >= LIMITE_SAQUES
+        passouValorSaque = saques_feito >= LIMITE_SAQUES
 
-        if execedeu_saldo:
+        if passouValorSaldo:
             print("Falha na operação, sem saldo suficiente!")
 
-        elif execedeu_limite:
+        elif passouValorLimite:
             print("Falha na operação, valor do saque execede o limite!")
 
-        elif execedeu_saq:
+        elif passouValorSaque:
             print("Falha na operação, valor maximo de saque execedido!")
 
         elif valor_saq > 0:
